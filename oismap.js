@@ -7,3 +7,12 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 L.marker([53.214249, 6.576941]).addTo(map)
     .bindPopup('Hier zijn wij')
     .openPopup();
+
+var oislogo = L.control({position: 'topright'}); 
+oislogo.onAdd = function (map) {        
+    var div = L.DomUtil.create('div', 'OIS logo');
+    div.innerHTML = '<img src="logo-ois-groningen.png" style="width: 20%; height:20%; float: right;">';     
+    return div;
+};      
+oislogo.addTo(map);
+
